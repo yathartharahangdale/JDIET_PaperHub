@@ -1,0 +1,132 @@
+/* ===== Reset & Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* ===== Animated Background Particles ===== */
+body::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px);
+  background-size: 50px 50px;
+  animation: moveBg 12s linear infinite;
+  z-index: 0;
+}
+
+@keyframes moveBg {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-50px, -50px); }
+}
+
+/* ===== Container Box ===== */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 380px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.8);}
+  100% { opacity: 1; transform: scale(1);}
+}
+
+/* ===== Heading ===== */
+.container h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #ffeb3b;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px #ffeb3b, 0 0 10px #ffeb3b; }
+  to { text-shadow: 0 0 20px #ff9800, 0 0 30px #ff9800; }
+}
+
+/* ===== Input Fields ===== */
+.input-box {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+  background: rgba(255,255,255,0.3);
+  box-shadow: 0 0 10px #00e5ff;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* ===== Links ===== */
+.container a {
+  color: #ffeb3b;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.container a:hover {
+  color: #00e5ff;
+  text-decoration: underline;
+}
+
+/* ===== Footer Small Text ===== */
+.footer-text {
+  margin-top: 15px;
+  font-size: 13px;
+  opacity: 0.8;
+}

@@ -1,0 +1,123 @@
+/* ===== Student Form Styles (Login & Register) ===== */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    background: transparent; backdrop-filter: blur(10px);
+    padding:20px;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+    text-align: center; 
+    border: 2px solid white;
+}
+
+/* Title */
+.container h1 {
+    margin-bottom: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* Form Inputs */
+form input {
+    background: transparent;
+    width: 80%;
+    padding:10px;
+    margin:10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: white; /* ensure text is visible on dark background */
+    transition: border 0.3s;
+}
+
+form input::placeholder {
+    color: #ccc;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+}
+
+form textarea {
+    background: transparent;
+    width: 80%;
+    padding:10px;
+    margin:10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: white; /* ensure text is visible on dark background */
+    transition: border 0.3s;
+}
+
+form textarea::placeholder {
+    color: #ccc;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+}
+/* Button */
+form button {
+    width: 80%;
+    padding: 0.8rem;
+    margin-top: 0.8rem;
+    background: #004080;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #0066cc;
+}
+
+/* Error Message */
+.error {
+    background: #ffe0e0;
+    color: #d9534f;
+    padding: 0.6rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Success Message */
+.success {
+    background: #e0ffe0;
+    color: #28a745;
+    padding: 0.6rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+}
